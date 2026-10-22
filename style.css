@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #f8fafc;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* 🧭 Top Navigation Styling */
+.topnav {
+  background-color: #1e293b;
+  overflow: hidden;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.topnav a {
+  color: #94a3b8;
+  text-align: center;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  border-radius: 6px;
+}
+
+.topnav a:hover { background-color: rgba(255, 255, 255, 0.05); color: white; }
+.topnav a.active { background-color: #38bdf8; color: #0f172a; font-weight: bold; }
+
+.topnav input[type=text] {
+  padding: 8px 14px; margin-left: auto; border-radius: 6px; width: 250px;
+  border: 1px solid rgba(255, 255, 255, 0.1); background: #0f172a; color: white;
+  outline: none; transition: border-color 0.2s;
+}
+.topnav input[type=text]:focus { border-color: #38bdf8; }
+
+/* ☰ Menu Core Trigger Button */
+.menu-trigger-btn {
+  background: rgba(56, 189, 248, 0.1); color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.3); padding: 8px 14px;
+  border-radius: 6px; font-weight: bold; cursor: pointer; outline: none;
+}
+.menu-trigger-btn:hover { background: #38bdf8; color: #0f172a; }
+.menu-trigger-btn:focus { box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.4); }
+.menu-trigger-btn:active { transform: scale(0.98); }
+.menu-trigger-btn:disabled { background: rgba(56, 189, 248, 0.05); color: #94a3b8; border-color: rgba(56, 189, 248, 0.1); cursor: not-allowed; }
+.menu-trigger-btn:disabled:hover { background: rgba(56, 189, 248, 0.05); color: #94a3b8; border-color: rgba(56, 189, 248, 0.1); }
+.menu-trigger-btn:disabled:focus { box-shadow: none; }
+.menu-trigger-btn:disabled:active { transform: none; }
+.menu-trigger-btn:disabled::after { content: " (Disabled)"; font-size: 0.8rem; color: #94a3b8; margin-left: 5px; }
+.menu-trigger-btn:disabled::before { content: "🚫";margin-right: 5px; }
+
+/* 🏁 FLEX GRIDS AUTO ADJUST SYSTEM */
+.app-layout {
+  display: flex;
+  width: 100%;
+  min-height: calc(100vh - 58px);
+}
+
+.dashboard-container {
+  flex-grow: 1;
+  width: 100%;
+  padding: 40px 20px;
+  transition: all 0.3s ease;
+}
+
+.main-header { text-align: center; margin-bottom: 40px; }
+.logo { font-size: 2.8rem; font-weight: 800; }
+.logo span { color: #38bdf8; }
+.tagline { color: #94a3b8; font-size: 1rem; margin-top: 5px; }
+
+.movies-list-container { display: flex; flex-direction: column; gap: 12px; max-width: 900px; margin: 0 auto; }
+
+.movie-row-item {
+  background: rgba(15, 23, 42, 0.4); border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 10px; padding: 16px 20px; display: flex; justify-content: space-between;
+  align-items: center; text-decoration: none; color: inherit; transition: all 0.2s;
+}
+.movie-row-item:hover { transform: scale(1.008); background: rgba(56, 189, 248, 0.1); border-color: #38bdf8; }
+.movie-info-block { display: flex; align-items: center; gap: 15px; }
+.movie-index-tag { color: #475569; font-weight: 700; }
+.movie-title-text { font-weight: 600; }
+.badge-tag { background: rgba(255, 255, 255, 0.08); color: #94a3b8; padding: 4px 10px; border-radius: 6px; font-size: 0.8rem; text-transform: uppercase;}
+.play-icon-indicator { color: #38bdf8; }
+
+/* 🔴 SIDEBAR PANELS CORE MECHANISM */
+.sidebar-container {
+  width: 0; flex: 0 0 0; background: #0f172a; overflow: hidden;
+  transition: width 0.3s ease, flex-basis 0.3s ease, border 0.3s ease;
+  border-right: 0 solid rgba(255, 255, 255, 0.08);
+}
+
+.sidebar-container.active {
+  width: 260px; flex-basis: 260px; border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sidebar-wrapper { width: 260px; padding: 24px 18px; }
+.sidebar-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; color: #f8fafc; }
+.sidebar-close-btn { background: none; border: none; color: #94a3b8; font-size: 28px; cursor: pointer; }
+.sidebar-close-btn:hover { color: #ef4444; }
+
+.sidebar-links { display: flex; flex-direction: column; gap: 15px; }
+.sidebar-link { color: #94a3b8; text-decoration: none; padding: 12px; border-radius: 8px; font-weight: 600; transition: all 0.2s;}
+.sidebar-link:hover { background: rgba(56, 189, 248, 0.1); color: #38bdf8; }
+.sidebar-link.active { background: rgba(56, 189, 248, 0.14); color: #38bdf8; }

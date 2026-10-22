@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Movie Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <div class="topnav">
+    <button id="open-sidebar-btn" class="menu-trigger-btn" type="button" aria-expanded="false" aria-controls="dynamic-sidebar">☰ Menu</button>
+    <input type="text" placeholder="Search movie or language..">
+  </div>
+
+  <!-- Master App Framework Layout Wrapper -->
+  <div class="app-layout">
+    
+    <!-- 🧭 INJECTABLE SIDEBAR PANEL CONTAINER -->
+    <aside id="dynamic-sidebar" class="sidebar-container" aria-label="Main navigation" inert>
+      <div class="sidebar-wrapper">
+        <div class="sidebar-header">
+          <h2>Menu</h2>
+          <button id="close-sidebar-btn" class="sidebar-close-btn" type="button" aria-label="Close menu">&times;</button>
+        </div>
+        <nav class="sidebar-links">
+          <a class="sidebar-link active" href="#home">Home</a>
+          <a class="sidebar-link" href="#about">About</a>
+          <a class="sidebar-link" href="#contact">Contact</a>
+          <a class="sidebar-link" href="./playground.html">Code Playground</a>
+          <a class="sidebar-link" href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">YouTube(watch direct on youtube by searching )</a>
+          <a class="sidebar-link" href="https://www.bilibili.com/translated in english or hindi" target="_blank" rel="noopener noreferrer">BiliBili(watch direct on BiliBili by searching )</a>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- 🚀 MAIN CONTENT MOVIES LIST -->
+    <div class="dashboard-container" id="home">
+      <header class="main-header">
+        <h1 class="logo">🚀 Media<span>Stream</span></h1>
+        <p class="tagline">Click any movie below to watch directly on YouTube player!</p>
+      </header>
+
+      <main class="content-area">
+        <div class="movies-list-container">
+          
+          <!-- Movie Item 01: Mangu The Donkey King -->
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="movie-row-item">
+            <div class="movie-info-block">
+              <span class="movie-index-tag">01</span>
+              <span class="movie-title-text">Mangu The Donkey King (Hollywood Hindi Dubbed)</span>
+              <span class="badge-tag">Urdu</span>
+            </div>
+            <div class="play-icon-indicator">▶ Play Movie</div>
+          </a>
+
+          <!-- Movie Item 02: The Last Warrior -->
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="movie-row-item">
+            <div class="movie-info-block">
+              <span class="movie-index-tag">02</span>
+              <span class="movie-title-text">The Last Warrior - 3D Chinese Magic (Hindi Dubbed)</span>
+              <span class="badge-tag">Chinese</span>
+            </div>
+            <div class="play-icon-indicator">▶ Play Movie</div>
+          </a>
+
+          <!-- Movie Item 03: Nezha Reborn -->
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="movie-row-item">
+            <div class="movie-info-block">
+              <span class="movie-index-tag">03</span>
+              <span class="movie-title-text">Nezha Reborn (Urdu Dubbed) - Fantasy Action</span>
+              <span class="badge-tag">Chinese</span>
+            </div>
+            <div class="play-icon-indicator">▶ Play Movie</div>
+          </a>
+
+          <!-- Movie Item 04: The Stolen Princess -->
+          <a href="https://youtube.com/watch?v.Jhs526sbs28ywushHJnj" target="_blank" rel="noopener noreferrer" class="movie-row-item">
+            <div class="movie-info-block">
+              <span class="movie-index-tag">04</span>
+              <span class="movie-title-text">The Stolen Princess (Hindi Dubbed Stream)</span>
+              <span class="badge-tag">Hollywood</span>
+            </div>
+            <div class="play-icon-indicator">▶ Play Movie</div>
+          </a>
+
+          <a href="https://www.bilibili.tv/en/video/4800931498433536" target="_blank" rel="noopener noreferrer" class="movie-row-item">
+            <div class="movie-info-block">
+              <span class="movie-index-tag">05</span>
+              <span class="movie-title-text">The First Order ep 1 (Hindi Dubbed Stream)</span>
+              <span class="badge-tag">Hollywood</span>
+            </div>
+            <div class="play-icon-indicator">▶ Play Movie</div>
+          </a>
+
+          <a href="https://bursa.pk/" target="_blank" rel="noopener noreferrer" class="movie-row-item">
+            <div class="movie-info-block">
+              <span class="movie-index-tag">06</span>
+              <span class="movie-title-text">Bursa Website (order fast food)</span>
+              <span class="badge-tag">Food</span>
+            </div>
+            <div class="play-icon-indicator">Visit Bursa.pk ↗</div>
+          </a>
+          
+        </div>
+      </main>
+    </div>
+
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

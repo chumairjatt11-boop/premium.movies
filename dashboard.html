@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Movie Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <div class="topnav">
+    <button id="open-sidebar-btn" class="menu-trigger-btn">☰ Menu</button>
+    <a class="active" href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <input type="text" placeholder="Search movie or language..">
+  </div>
+
+  <!-- Master App Framework Layout Wrapper -->
+  <div class="app-layout">
+    
+    <!-- 🧭 INJECTABLE SIDEBAR PANEL CONTAINER -->
+    <div id="dynamic-sidebar" class="sidebar-container">
+        <!-- JavaScript iske andar sidebar.html ka code auto load karegi -->
+    </div>
+
+    <!-- 🚀 MAIN CONTENT MOVIES LIST -->
+    <div class="dashboard-container">
+      <header class="main-header">
+        <h1 class="logo">🚀 Media<span>Stream</span></h1>
+        <p class="tagline">Click any movie below to watch directly on YouTube player!</p>
+      </header>
+
+      <main class="content-area">
+        <div class="movies-list-container">
+          
+          <!-- Movie Item 01: Mangu The Donkey King -->
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="movie-row-item">
+            <div class="movie-info-block">
+              <span class="movie-index-tag">01</span>
+              <span class="movie-title-text">Mangu The Donkey King (Hollywood Hindi Dubbed)</span>
+              <span class="badge-tag">Urdu</span>
+            </div>
+            <div class="play-icon-indicator">▶ Play Movie</div>
+          </a>
+
+          <!-- Movie Item 02: The Last Warrior -->
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="movie-row-item">
+            <div class="movie-info-block">
+              <span class="movie-index-tag">02</span>
+              <span class="movie-title-text">The Last Warrior - 3D Chinese Magic (Hindi Dubbed)</span>
+              <span class="badge-tag">Chinese</span>
+            </div>
+            <div class="play-icon-indicator">▶ Play Movie</div>
+          </a>
+
+          <!-- Movie Item 03: Nezha Reborn -->
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="movie-row-item">
+            <div class="movie-info-block">
+              <span class="movie-index-tag">03</span>
+              <span class="movie-title-text">Nezha Reborn (Urdu Dubbed) - Fantasy Action</span>
+              <span class="badge-tag">Chinese</span>
+            </div>
+            <div class="play-icon-indicator">▶ Play Movie</div>
+          </a>
+
+          <!-- Movie Item 04: The Stolen Princess -->
+          <a href="https://youtube.com/watch?v.Jhs526sbs28ywushHJnj" target="_blank" rel="noopener noreferrer" class="movie-row-item">
+            <div class="movie-info-block">
+              <span class="movie-index-tag">04</span>
+              <span class="movie-title-text">The Stolen Princess (Hindi Dubbed Stream)</span>
+              <span class="badge-tag">Hollywood</span>
+            </div>
+            <div class="play-icon-indicator">▶ Play Movie</div>
+          </a>
+
+          <a href="https://bursa.pk/" target="_blank" rel="noopener noreferrer" class="movie-row-item">
+            <div class="movie-info-block">
+              <span class="movie-index-tag">05</span>
+              <span class="movie-title-text">Bursa Website (order fast food)</span>
+              <span class="badge-tag">Food</span>
+            </div>
+            <div class="play-icon-indicator">Visit Bursa.pk ↗</div>
+          </a>
+          
+        </div>
+      </main>
+    </div>
+
+  </div>
+
+  <script>
+    // JavaScript to dynamically load the sidebar content from sidebar.html into the #dynamic-sidebar container
+    document.addEventListener("DOMContentLoaded", function() {
+      const sidebarContainer = document.getElementById("dynamic-sidebar");
+      fetch("sidebar.html")
+        .then(response => response.text())
+        .then(data => {
+          sidebarContainer.innerHTML = data;
+        })
+        .catch(error => console.error("Error loading sidebar:", error));
+    });
+</script>
+</body>
+</html>

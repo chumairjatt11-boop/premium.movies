@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#10131a" />
+    <title>Live HTML Playground</title>
+    <link rel="stylesheet" href="./playground.css" />
+    <script src="./playground.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="./index.html" aria-label="Live HTML Playground home">
+        <span class="brand-mark">&lt;/&gt;</span>
+        <span>Web Playground</span>
+      </a>
+      <span class="topbar-note">Write code and see the result live</span>
+      <div class="top-actions">
+        <a class="dashboard-link" href="./index.html">Back to my dashboard</a>
+        <button class="reset-button" id="reset-button" type="button">Reset example</button>
+        <button class="run-button" id="run-button" type="button">▶ Run</button>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <section class="editor-panel" aria-label="Code editor">
+        <div class="panel-heading">
+          <div>
+            <span class="eyebrow">EDITOR</span>
+            <span class="panel-title">Your code</span>
+          </div>
+          <span class="save-status" id="save-status" aria-live="polite">Saved in this browser</span>
+        </div>
+        <div class="file-tabs" role="tablist" aria-label="Code file">
+          <button class="file-tab active" id="tab-html" type="button" role="tab" aria-selected="true" aria-controls="code-html" data-language="html"><span class="file-icon html-icon">5</span>index.html</button>
+          <button class="file-tab" id="tab-css" type="button" role="tab" aria-selected="false" aria-controls="code-css" data-language="css"><span class="file-icon css-icon">#</span>style.css</button>
+          <button class="file-tab" id="tab-js" type="button" role="tab" aria-selected="false" aria-controls="code-js" data-language="js"><span class="file-icon js-icon">JS</span>script.js</button>
+          <span class="tab-spacer"></span>
+          <span class="shortcut-hint">Ctrl + Enter to run</span>
+        </div>
+        <div class="editor-content">
+          <label class="visually-hidden" for="code-html">HTML code</label>
+          <textarea id="code-html" class="code-input active" role="tabpanel" aria-labelledby="tab-html" data-language="html" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off"></textarea>
+          <label class="visually-hidden" for="code-css">CSS code</label>
+          <textarea id="code-css" class="code-input" role="tabpanel" aria-labelledby="tab-css" data-language="css" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off" hidden></textarea>
+          <label class="visually-hidden" for="code-js">JavaScript code</label>
+          <textarea id="code-js" class="code-input" role="tabpanel" aria-labelledby="tab-js" data-language="js" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off" hidden></textarea>
+        </div>
+        <div class="editor-footer">
+          <span id="line-count">HTML</span>
+          <span>Changes save automatically</span>
+        </div>
+      </section>
+
+      <section class="preview-panel" aria-label="Live preview">
+        <div class="panel-heading preview-heading">
+          <div>
+            <span class="eyebrow"><span class="live-dot"></span> LIVE PREVIEW</span>
+            <span class="panel-title">Output</span>
+          </div>
+          <span class="preview-status" id="preview-status" aria-live="polite">Ready</span>
+        </div>
+        <iframe id="preview" title="Your code output" sandbox="allow-scripts"></iframe>
+      </section>
+    </main>
+    <noscript>This playground needs JavaScript enabled in your browser.</noscript>
+  </body>
+</html>
